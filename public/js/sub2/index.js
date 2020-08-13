@@ -11,7 +11,7 @@ function event(){
 			render();
 		}
 	})
-	.on("click",".open",function(){
+	.on("click",".open",() => {
 		render();
 		store.commit('button', true);
 	})	
@@ -25,7 +25,7 @@ window.onload = async _ => {
 
 		buttonData
 			? render()
-			: renderByData(store.state.items.slice().splice(0, 10))
+			: renderByData(store.getItemsSplice(10))
 
 		event();
 
