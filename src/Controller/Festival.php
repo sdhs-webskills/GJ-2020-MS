@@ -3,7 +3,7 @@ namespace src\Controller;
 use src\Core\DB;
 class Festival
 {
-	function Main($data){
+	function Main($data=[]){
 		$arr = (Object)[];
 		$idx = count($data) == 2 ? $data[1]-1 : 0;
 		$pageIdx = $idx*11;
@@ -31,6 +31,11 @@ class Festival
 		$arr->files = self::getFile($idx);
 		$arr->comments = self::getComment($idx);
 		view("festival/info",(array)$arr);
+	}
+	function calendar(){
+		$arr = (Object)[];
+		$arr->view = DB::fetchAll("SELECT * FROM festival_view",[]);
+		view("festival/calendar",(array)$arr);
 	}
 	// CRUD 
 	function Insert(){
@@ -133,6 +138,17 @@ class Festival
 	function dateCheck($date){
 		if(!preg_match("/^([0-9]{4}(-[0-9]{2}){2} ~ [0-9]{4}(-[0-9]{2}){2})$/",$date)){
 			back("축제 기간의 입력 형식을 지켜주세요.");
+		}
+		$dateArr = explode("~", $date);
+		$dateArr[0] = trim($dateArr[0]);
+		$dateArr[1] = trim($dateArr[1]);
+		foreach ($dateArr as $key => $v) {
+			if( !dateCheck($v) ){
+				back("날짜 값이 올바르지 않습니다.");
+			}
+		}
+		if( !($dateArr[0] <= $dateArr[1]) ){
+			back("시작일이 종료일보다 늦게 될수 없습니다.");
 		}
 	}
 }

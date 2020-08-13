@@ -162,3 +162,25 @@ css background로 전환
 #comment .del{ position: absolute; right: 0; top: 0; width: 30px; height: 30px; text-align: center; line-height: 30px; border-radius: 0; }
 #comment.open{ display: flex; }
 
+
+#festival_calendar{ padding: 30px 0; }
+#festival_calendar .container{ width: 1400px; padding:0 25px; }
+#festival_calendar #date-wrap{ width: 100%; height: 60px; justify-content: space-between; align-items: center; }
+#festival_calendar #date-wrap .todayBtn{ color:red; border:1px solid lightgray; padding:5px 12px; cursor: pointer; }
+#festival_calendar #date-wrap a{  padding: 5px 12px; background: #333; color: #fff; }
+#festival_calendar #date-wrap .flex{ align-items: center; }
+#festival_calendar #date-wrap .calendarBtn{ padding:5px 12px; border:1px solid lightgray; cursor: pointer;}
+#festival_calendar #date-wrap .today{ margin:0 20px;  }
+#festival_calendar #calendar-wrap{ width: 100%; table-layout: fixed; border-collapse: collapse;}
+#festival_calendar #calendar-wrap th{ height: 35px; border:1px solid lightgray; background: #eee;}
+#festival_calendar #calendar-wrap td{ position: relative; height: 110px; border:1px solid lightgray; text-align: center; }
+#festival_calendar #calendar-wrap td a{ font-size: 12px; color:#333; }
+#festival_calendar #calendar-wrap td.high{ background: #333;  }
+#festival_calendar #calendar-wrap td.high{ color: #fff; }
+#festival_calendar #calendar-wrap td::before{ position: absolute; right: 0; top: 0; content: attr(data-day); padding: 5px; font-weight: bold; }
+
+#festival_calendar #calendar-wrap th:first-child,
+#festival_calendar #calendar-wrap td:first-child::before{ color:#ff5555; }
+#festival_calendar #calendar-wrap th:last-child,
+#festival_calendar #calendar-wrap td:last-child::before{ color:#7575e0; }
+/*#calendar-wrap{ width:  table-layout: fixed; }*/

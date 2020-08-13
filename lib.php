@@ -24,6 +24,10 @@ function dataCheck($data){
 	$data = array_splice($data,-1,1);
 	return $data ? $data : false;
 }
+function dateCheck($date,$format='Y-m-d'){
+	$d = date_create_from_format($format,$date);
+	return $d->format($format) == $date;
+}
 function getImage($path){
 	$type = preg_replace("/(.*)\.(.*)/","$2", $path);
 	header("Content-type: image/$type");

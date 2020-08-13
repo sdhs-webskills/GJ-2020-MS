@@ -38,7 +38,7 @@
 								<li><a href="/">HOME</a></li>
 								<li><a href="#">전북 대표 축제</a></li>
 								<li><a href="/festival">축제 정보</a></li>
-								<li><a href="#">축제 일정</a></li>
+								<li><a href="/festival/calendar">축제 일정</a></li>
 								<li><a href="sub2.html">환율안내</a></li>
 								<li>
 									<a href="#">종합지원센터</a>
