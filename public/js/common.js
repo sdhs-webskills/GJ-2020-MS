@@ -1,10 +1,6 @@
-let xml,
-  main = {
-    type: "basic",
-    itemCount: 6,
-    page: 0,
-    cut: 0
-  };
+import xml from './xml';
+import { render } from "./renderer";
+import { event } from "./events";
 
 const init = (async _ => {
   const text = await fetch("/xml/festivalList.xml").then(v => v.text());
