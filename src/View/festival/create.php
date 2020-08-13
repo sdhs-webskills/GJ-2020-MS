@@ -1,6 +1,6 @@
 <section id="festival_insert" class="festival_crud">
 	<div class="container">
-		<form action="/festival_insert" method="post" enctype="multipart/form-data">
+		<form action="/festival/insert" method="post" enctype="multipart/form-data">
 			<h2>축제관리</h2>
 			<div class="row">
 				<p>축제명</p>

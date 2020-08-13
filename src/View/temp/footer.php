@@ -3,7 +3,6 @@
 		<div class="del">닫기</div>
 		<div class="dialog-body"></div>
 	</dialog>
-	<script src="/js/jquery-3.5.0.min.js"></script>
 	<script>
 		const timeoutBtn = async _ =>{
 			setTimeout(function(){

@@ -146,3 +146,19 @@ css background로 전환
 .festival_crud .img-container .img-box input{ display: block; margin:0 auto; }
 .festival_crud .img-container img{ width: auto; max-width: 120px; height: 120px; object-fit: cover; }
 .festival_crud .row .con{  font-size: 12px; color:#333; line-height: 35px;}
+
+#festival_view .container{ width: 1000px; }
+#festival_view .img-wrap{ grid-template-columns: repeat(4,1fr); padding: 15px 40px; grid-gap: 20px 0;}
+#festival_view .img-wrap .img-box{ width: 200px; height: 200px; border:1px solid lightgray; }
+#festival_view .img-wrap .img-box img{ width: 100%; height: 100%; object-fit: cover; object-position: top;}
+#comment{ position: fixed; left:50%; top:50%; z-index: 10; width: 500px; padding: 30px 45px;  border-radius: 5px; transform: translate(-50%,-50%);  display: none;}
+#comment form{  width: 100%; height: 100%; }
+#comment input{ border:1px solid lightgray; padding:0 10px;}
+#comment .row{ width: 100%; font-size: 12px; color:#333; line-height: 25px; }
+#comment .row input{ width: 100%; height:30px; line-height: 30px; font-size: 12px; color:#333;}
+#comment .row-wrap .row{ flex:1; margin:0 5px;}
+#comment .row-wrap .row input{ width: 100%; height: 30px; }
+#comment .sm{ margin-top: 15px;  float: right; }
+#comment .del{ position: absolute; right: 0; top: 0; width: 30px; height: 30px; text-align: center; line-height: 30px; border-radius: 0; }
+#comment.open{ display: flex; }
+

@@ -20,6 +20,10 @@ function download($type,$path,$fidx){
 	readfile("../Image.$type");
 	unlink("../Image.$type");
 }
+function dataCheck($data){
+	$data = array_splice($data,-1,1);
+	return $data ? $data : false;
+}
 function getImage($path){
 	$type = preg_replace("/(.*)\.(.*)/","$2", $path);
 	header("Content-type: image/$type");

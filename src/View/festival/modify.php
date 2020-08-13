@@ -1,6 +1,6 @@
 <section id="festival_modify" class="festival_crud">
 	<div class="container">
-		<form action="/festival_modify/<?= $view->idx ?>" method="post" enctype="multipart/form-data">
+		<form action="/festival/update/<?= $view->idx ?>" method="post" enctype="multipart/form-data">
 			<h2>축제관리</h2>
 			<div class="row">
 				<p>축제명</p>

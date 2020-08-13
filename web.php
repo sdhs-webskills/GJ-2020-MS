@@ -1,20 +1,24 @@
 <?php 
 use src\Core\Route;
-Route::reg([
-	['get','/@View@main'],
-	['get','/login@View@login'],
-	['post','/user/login@User@login'],
-	['get','/festival@View@festival'],
-	['get','/festival/:idx@View@festival'],
-	['get','/download/:type/:fidx/:path@View@download'],
-	['get','/getImage/:folder/:name@View@Image']
-]);
 $arr = [];
-if( ss() ){
+if( ss() ){ // 로그인 O
 	$arr[] = ['get',"/user/logout@User@logout"];
-	$arr[] = ['get',"/festival_insert@View@festival_insert"];
-	$arr[] = ['get',"/festival_modify/:idx@View@festival_modify"];
-	$arr[] = ['post',"/festival_insert@Festival@insert"];
-	$arr[] = ['post',"/festival_modify/:idx@Festival@modify"];
+	$arr[] = ['get',"/festival/create@Festival@Create"];
+	$arr[] = ['get',"/festival/modify/:idx@Festival@Modify"];
+	$arr[] = ['get','/comment/:idx@Comment@delete'];
+	$arr[] = ['post',"/festival/insert@Festival@Insert"];
+	$arr[] = ['post',"/festival/update/:idx@Festival@Update"];
+}else{ // 로그인 X
+	$arr[] = ['get','/login@View@login'];
+	$arr[] = ['post','/user/login@User@login'];
 }
+// 로그인 상관없음
+$arr[] = ['get','/@View@main'];
+$arr[] = ['get','/festival@Festival@Main'];
+$arr[] = ['get','/festival/:idx@Festival@Main'];
+$arr[] = ['get','/festival/info/:idx@Festival@info'];
+$arr[] = ['post','/comment/:idx@Comment@insert'];
+$arr[] = ['get','/download/:type/:fidx/:path@View@download'];
+$arr[] = ['get','/getImage/:folder/:name@View@Image'];
+
 Route::reg($arr);
