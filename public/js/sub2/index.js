@@ -17,7 +17,7 @@ function event(){
 		})
 }
 
-window.onload = async _ => {
+window.onload = async () => {
 	try {
 		await store.loadItems();
 		const {scrollData, buttonData} = store.state;
