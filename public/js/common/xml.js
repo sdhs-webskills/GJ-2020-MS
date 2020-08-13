@@ -1,4 +1,4 @@
-import $ from './jquery-3.5.0.min';
+import $ from '../jquery/jquery-3.5.0.min';
 
 export default Object.freeze({
   data: null,

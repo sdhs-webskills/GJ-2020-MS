@@ -1,6 +1,6 @@
 import store from "./store";
 import { render } from "./renderer";
-import $ from './jquery-3.5.0.min';
+import $ from '../jquery/jquery-3.5.0.min';
 import xml from './xml';
 
 export const event = () => {
