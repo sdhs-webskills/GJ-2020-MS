@@ -17,7 +17,7 @@ class Route
 		}
 		foreach (self::${$_SERVER['REQUEST_METHOD']} as $key => $v) { // url 데이터도 같이봄
 			$v = explode("@", $v);
-			$reg = preg_replace("/:([^\/])+/","([^/]+)", $v[0]);
+			$reg = preg_replace("/:([^\/]+)/","([^/]+)", $v[0]);
 			$reg = preg_replace("/\//","\\/",$reg);
 			$reg = "/^".$reg."$/";			
 			if( preg_match($reg,$get,$r) ){
